@@ -36,41 +36,59 @@ dependencies {
 ## Usage
 ### Basic Example
 
-#### Prepare to making item
+#### Prepare to making binding xml
 ```xml
-<layout>    
-    <data>
-        <!-- You should to declare for Item -->
-        <variable
-            name="item"
-            type="com.solar.recyclerviewsample.Food" />
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-        <!-- If you wan't to use that you have not to declare -->
-        <variable
-            name="vm"
-            type="com.solar.recyclerviewsample.FoodViewModel" />
+    <data>
+
     </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 ```
 
+#### Activity
 ```kotlin
-data class Food (
-    val title: String,
-    val subtitle: String,
-    val img: Int,
-    override val layoutRes: Int = R.layout.item_food_menu
-) : ItemType
+class MainActivity : BindingActivity() {
+
+    private val binding by binding<ActivityMainBinding>(R.layout.activity_main)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding.let {
+
+        }
+    }
+}
 ```
 
-#### Set Adapter
+#### Fragment
 ```kotlin
-main_basic_recycler_view.adapter = DataBindingAdapter<Food>(
-            FoodViewModel()
-       ).apply {
-            submitList(foods)
-       }
-```
+class SampleFragment : BindingFragment<FragmentSampleBinding>(){
+    override val layoutRes: Int = R.layout.fragment_sample
 
-<p align="center">
-  <img width="320" src="https://user-images.githubusercontent.com/39362939/95305625-32dd3400-08c1-11eb-88b3-92be623a5aca.gif">
-</p>
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // To Something
+    }
+}
+```
