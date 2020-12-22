@@ -1,4 +1,4 @@
-package com.solar.binding.library.fragment
+package com.solar.library.binding.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

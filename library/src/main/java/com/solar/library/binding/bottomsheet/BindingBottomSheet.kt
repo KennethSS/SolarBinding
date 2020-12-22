@@ -1,8 +1,7 @@
-package com.solar.binding.library.bottomsheet
+package com.solar.library.binding.bottomsheet
 
 import android.content.Context
 import android.view.LayoutInflater
-import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog

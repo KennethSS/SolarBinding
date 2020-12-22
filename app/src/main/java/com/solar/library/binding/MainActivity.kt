@@ -1,4 +1,4 @@
-package com.solar.binding
+package com.solar.library.binding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

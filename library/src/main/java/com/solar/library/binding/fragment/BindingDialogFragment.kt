@@ -1,4 +1,4 @@
-package com.solar.binding.library.fragment
+package com.solar.library.binding.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 
 abstract class BindingDialogFragment<B: ViewDataBinding> : AppCompatDialogFragment() {

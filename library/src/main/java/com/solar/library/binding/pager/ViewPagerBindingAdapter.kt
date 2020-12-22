@@ -1,4 +1,4 @@
-package com.solar.binding.library.pager
+package com.solar.library.binding.pager
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.viewpager.widget.PagerAdapter
-import com.solar.binding.library.BR
+import com.solar.library.binding.BR
+
 
 abstract class ViewPagerBindingAdapter<T, B: ViewDataBinding>(
     private val list: List<T>,
@@ -16,7 +17,7 @@ abstract class ViewPagerBindingAdapter<T, B: ViewDataBinding>(
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val inflater    = container.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val bind = DataBindingUtil.inflate<B>(inflater, layoutRes, container, false)
-        bind.setVariable(BR.page, list[position])
+        bind.setVariable(BR.item, list[position])
         container.addView(bind.root)
 
         return bind.root

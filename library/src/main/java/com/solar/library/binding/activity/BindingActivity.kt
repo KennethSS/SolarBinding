@@ -1,4 +1,4 @@
-package com.solar.binding.library.activity
+package com.solar.library.binding.activity
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

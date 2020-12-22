@@ -1,4 +1,4 @@
-package com.solar.binding
+package com.solar.library.binding
 
 import org.junit.Test
 

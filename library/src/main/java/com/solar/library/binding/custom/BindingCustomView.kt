@@ -1,4 +1,4 @@
-package com.solar.binding.library.custom
+package com.solar.library.binding.custom
 
 import android.content.Context
 import android.util.AttributeSet
