@@ -28,7 +28,7 @@ buildFeatures {
 
 ```gradle
 dependencies {
-  implementation 'com.github.KennethSS:SolarBinding:1.0.2'
+  implementation 'com.github.KennethSS:SolarBinding:1.0.1'
 }
 ```
 
