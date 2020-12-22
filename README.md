@@ -89,7 +89,9 @@ class SampleFragment : BindingFragment<FragmentSampleBinding>(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // To Something
+        bind?.let {  
+            it.sampleTv.text = "Hello World!"
+        }
     }
 }
 ```
