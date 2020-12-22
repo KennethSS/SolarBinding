@@ -53,6 +53,7 @@ dependencies {
         tools:context=".MainActivity">
 
         <TextView
+            android:id="@+id/center_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
@@ -74,8 +75,8 @@ class MainActivity : BindingActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding.let {
-
+        with(binding) {
+            centerTv.text = "Hello World!"
         }
     }
 }
