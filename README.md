@@ -10,7 +10,7 @@ A SolarBinding with databinding for andorid
 
 ### Dependency Gradle 
 Add below codes to your **root** `build.gradle` file (not your module build.gradle file).
-```
+```gradle
 allprojects {
     repositories {
         jcenter()
