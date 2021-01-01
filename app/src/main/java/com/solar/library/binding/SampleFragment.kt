@@ -11,12 +11,7 @@ import com.solar.library.binding.fragment.BindingFragment
 class SampleFragment : BindingFragment<FragmentSampleBinding>(){
     override val layoutRes: Int = R.layout.fragment_sample
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        // To Something
-
-        bind?.let {
-            it.sampleTv.text = "Hello World!"
-        }
+    override fun onViewCreated(bind: FragmentSampleBinding, savedInstanceState: Bundle?) {
+        bind.sampleTv.text = "Hello World!"
     }
 }
