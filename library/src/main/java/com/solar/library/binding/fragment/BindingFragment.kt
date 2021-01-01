@@ -17,6 +17,8 @@ abstract class BindingFragment<B: ViewDataBinding> : Fragment() {
 
     protected abstract val layoutRes: Int
 
+    protected abstract fun onViewCreated(bind: B, savedInstanceState: Bundle?)
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,6 +29,11 @@ abstract class BindingFragment<B: ViewDataBinding> : Fragment() {
         }
 
         return bind?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        bind?.let { onViewCreated(it, savedInstanceState) }
     }
 
     override fun onDestroyView() {
