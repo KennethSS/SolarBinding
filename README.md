@@ -10,7 +10,7 @@ A SolarBinding with databinding for andorid
 
 ### Dependency Gradle 
 Add below codes to your **root** `build.gradle` file (not your module build.gradle file).
-```gradle
+```gradle(project)
 allprojects {
     repositories {
         maven { url "https://jitpack.io" }
@@ -19,7 +19,11 @@ allprojects {
 ```
 
 And add a dependency code to your **module**'s `build.gradle` file.
-```gradle
+```gradle(app)
+plugins {
+  id 'kotlin-kapt'
+}
+
 buildFeatures {
   dataBinding true
 }
